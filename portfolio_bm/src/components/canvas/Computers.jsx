@@ -27,23 +27,23 @@ const Computers = ({ isMobile }) => {
     </mesh>
   );
 };
-const ComputersCanvas = () => {
-  const [isMobile, setIsMobile] = useState(false);
+const ComputersCanvas = ({ isMobile }) => {
+  // const [isMobile, setIsMobile] = useState(false);
 
-  useEffect(() => {
-    const mediaQuery = window.matchMedia('(max-width: 500px)');
-    setIsMobile(mediaQuery.matches);
+  // useEffect(() => {
+  //   const mediaQuery = window.matchMedia('(max-width: 450px)');
+  //   setIsMobile(mediaQuery.matches);
 
-    const handleMediaQueryChange = (e) => {
-      setIsMobile(e.matches);
-    };
+  //   const handleMediaQueryChange = (e) => {
+  //     setIsMobile(e.matches);
+  //   };
 
-    mediaQuery.addEventListener('change', handleMediaQueryChange);
+  //   mediaQuery.addEventListener('change', handleMediaQueryChange);
 
-    return () => {
-      mediaQuery.removeEventListener('change', handleMediaQueryChange);
-    };
-  }, []);
+  //   return () => {
+  //     mediaQuery.removeEventListener('change', handleMediaQueryChange);
+  //   };
+  // }, []);
 
   return (
     <Canvas
